@@ -1,0 +1,156 @@
+/*
+Description: MMCF 
+Author: Marcel Leão
+*/
+
+
+/* 
+
+Notes: 1em = 10px; 
+
+*/
+
+/* Resets */
+
+html { font-size: 100.01% !important; }
+body { font-size: 10px !important; word-break: break-all; }
+
+html, body, form { padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p, ul, li { margin: 1em 0; padding: 0; }
+
+a { text-decoration: none; outline: none; }
+a:link img { border: none; }
+
+table { border-collapse: separate; border-spacing: 0; }
+
+/* Structural */
+
+.float-left { float: left; }
+.float-right { float: right; }
+.clear { clear: both; height: 0px; overflow: hidden; }
+
+    /* Requires width */
+.center-block { margin: 0 auto; padding: 0 auto; }
+
+.block { display: block; }
+.inline-block { display: inline-block; }
+
+	/* They work together */
+.table { display: table; }
+.table-cell { display: table-cell; }
+
+/* Alignment */
+
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+.align-center { text-align: center; }
+.align-justify { text-align: justify; }
+
+	/* Requires display: table-cell; */
+.valgin-middle { vertical-align: middle; }
+
+/* Font & styling */
+
+.arial { font-family: 'Arial'; }
+
+.font08 { font-size: 0.8em; }
+.font09 { font-size: 0.9em; }
+.font10 { font-size: 1.0em; }
+.font11 { font-size: 1.1em; }
+.font12 { font-size: 1.2em; }
+.font13 { font-size: 1.3em; }
+.font14 { font-size: 1.4em; }
+.font15 { font-size: 1.5em; }
+.font16 { font-size: 1.6em; }
+.font17 { font-size: 1.7em; }
+.font18 { font-size: 1.8em; }
+.font19 { font-size: 1.9em; }
+.font20 { font-size: 2.0em; }
+.font21 { font-size: 2.1em; }
+.font22 { font-size: 2.2em; }
+.font23 { font-size: 2.3em; }
+.font24 { font-size: 2.4em; }
+.font25 { font-size: 2.5em; }
+.font26 { font-size: 2.6em; }
+.font27 { font-size: 2.7em; }
+.font28 { font-size: 2.8em; }
+.font29 { font-size: 2.9em; }
+.font30 { font-size: 3.0em; }
+.font31 { font-size: 3.1em; }
+.font32 { font-size: 3.2em; }
+.font33 { font-size: 3.3em; }
+.font34 { font-size: 3.4em; }
+.font35 { font-size: 3.5em; }
+.font36 { font-size: 3.6em; }
+.font37 { font-size: 3.7em; }
+.font38 { font-size: 3.8em; }
+.font39 { font-size: 3.9em; }
+.font40 { font-size: 4.0em; }
+.font41 { font-size: 4.1em; }
+.font42 { font-size: 4.2em; }
+.font43 { font-size: 4.3em; }
+.font44 { font-size: 4.4em; }
+.font45 { font-size: 4.5em; }
+.font46 { font-size: 4.6em; }
+.font47 { font-size: 4.7em; }
+.font48 { font-size: 4.8em; }
+
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.underline { text-decoration: underline !important; }
+
+/* Colors */
+
+/* BGx colors */
+
+	
+/* Arrows */
+
+.arrow-left-blue {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid blue;
+    border-top: 10px solid transparent;
+    height: 0;
+    width: 0;
+}
+
+.arrow-right-blue {
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid blue;
+    border-top: 10px solid transparent;
+    height: 0;
+    width: 0;
+}
+
+/* Effects */
+
+.round02 { border-radius: 2px 2px 2px 2px; -webkit-border-radius: 2px 2px 2px 2px; -moz-border-radius: 2px 2px 2px 2px; } 
+.round15 { border-radius: 15px 15px 15px 15px; -webkit-border-radius: 15px 15px 15px 15px; -moz-border-radius: 15px 15px 15px 15px; } 
+
+.transparent25 { filter: alpha(opacity=25); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)"; opacity: 0.25; }
+.transparent50 { filter: alpha(opacity=50); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; opacity: 0.5; }
+
+.shadow  { 
+	-moz-box-shadow: 10px 10px 5px black; 
+	-webkit-box-shadow: 10px 10px 5px black; 
+	box-shadow: 10px 10px 5px black; 
+}
+
+.shadow-box { 
+	-webkit-box-shadow: 9px 9px 0px 0px rgba(220, 220, 220, 0.9); 
+	-moz-box-shadow: 9px 9px 0px 0px rgba(220, 220, 220, 0.9); 
+	box-shadow: 9px 9px 0px 0px rgba(220, 220, 220, 0.9); 
+}
+
+.gradient {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#CCC), to(#000)); 
+	background-image: -moz-linear-gradient(top,  #CCC,  #000);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCC', endColorstr='#000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#CCC', endColorstr='#000')";
+	background-image: -o-linear-gradient(top, #CCC, #000);
+}
+
+/* Facebook */
+
+.fb-comments, .fb-comments span, .fb-comments iframe { width: 100% !important; }
