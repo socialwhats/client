@@ -24,6 +24,14 @@ a:link img { border: none; }
 
 table { border-collapse: separate; border-spacing: 0; }
 
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    min-height: 1px;
+    padding: 0 !important;
+    position: relative;
+}
+
+
+
 /* Structural */
 
 .float-left { float: left; }
@@ -33,12 +41,12 @@ table { border-collapse: separate; border-spacing: 0; }
     /* Requires width */
 .center-block { margin: 0 auto; padding: 0 auto; }
 
-.block { display: block; }
-.inline-block { display: inline-block; }
+.display-block { display: block; }
+.display-inline-block { display: inline-block; }
 
 	/* They work together */
-.table { display: table; }
-.table-cell { display: table-cell; }
+.display-table { display: table; }
+.display-table-cell { display: table-cell; }
 
 /* Alignment */
 
@@ -102,7 +110,19 @@ table { border-collapse: separate; border-spacing: 0; }
 
 /* Colors */
 
-/* BGx colors */
+.color-white { color: White; }
+.color-F1F1F1 { color: #F1F1F1; }
+.color-5094FF { color: #5094FF; }
+.color-4077CC { color: #4077CC; }
+.color-606060 { color: #606060; }
+
+/* BG colors */
+
+.bg-white { background-color: White; }
+.bg-F1F1F1 { background-color: #F1F1F1; }
+.bg-5094FF { background-color: #5094FF; }
+.bg-4077CC { background-color: #4077CC; }
+.bg-606060 { background-color: #606060; }
 
 	
 /* Arrows */
@@ -131,16 +151,10 @@ table { border-collapse: separate; border-spacing: 0; }
 .transparent25 { filter: alpha(opacity=25); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)"; opacity: 0.25; }
 .transparent50 { filter: alpha(opacity=50); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; opacity: 0.5; }
 
-.shadow  { 
-	-moz-box-shadow: 10px 10px 5px black; 
-	-webkit-box-shadow: 10px 10px 5px black; 
-	box-shadow: 10px 10px 5px black; 
-}
-
-.shadow-box { 
-	-webkit-box-shadow: 9px 9px 0px 0px rgba(220, 220, 220, 0.9); 
-	-moz-box-shadow: 9px 9px 0px 0px rgba(220, 220, 220, 0.9); 
-	box-shadow: 9px 9px 0px 0px rgba(220, 220, 220, 0.9); 
+.custom-shadow { 
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.50);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.50);
+	box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.50);
 }
 
 .gradient {
