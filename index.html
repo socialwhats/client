@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=-4">
+    <meta name="viewport" content="width=device-width">
 
     <link href="Content/CSS/maxi.css" rel="stylesheet" type="text/css" />
     <link href="Content/CSS/bootstrap.css" rel="stylesheet" type="text/css" />
@@ -12,12 +12,13 @@
 
     <title>Title</title>
     <style>
-    	.custom-container { max-width: 1000px; }
+    	.custom-container { width: 100%; }
 
     	.content-breathing { margin-top: 60px; position: relative; z-index: 1; }
     	.content-block { height: 600px; position: relative; z-index: 1; }
 
-    	#header { max-width: 1000px; height: 60px; position: fixed; top: 0; left: 0; right: 0; z-index: 2; }
+    	#header { width: 100%; height: 60px; position: fixed; top: 0; left: 0; right: 0; z-index: 2; }
+    	#header-wrapper { max-width: 1000px;}
     	.button-wrapper { margin: 10px 10px 0 0; }
     	.button-wrapper:last-child { margin: 10px 0 !important; }
     	.button { width: 160px; height: 40px; cursor: pointer; background-color: #5094FF; }
@@ -27,7 +28,7 @@
     	.button-menu { width: 40px; height: 50px; cursor: pointer; background-color: #5094FF; }
     	.button-menu:hover { background-color: #4077CC }
 
-    	.menu-item { width: 100%; height: 42px; border-bottom: 1px solid #C2C2C2; cursor: pointer; }
+    	.menu-item { width: 100%; height: 52px; border-bottom: 1px solid #C2C2C2; cursor: pointer; }
     	.menu-item-link:hover { background-color: #E5E5E5; }
     </style>
     <script type="text/javascript">
@@ -39,47 +40,51 @@
     </script>
 </head>
 <body class="bg-F1F1F1">
-	<div class="custom-container center-block">
+	<div class="custom-container">
 		<div id="header" class="custom-shadow bg-white center-block col-lg-12 col-md-12 col-sm-12 visible-lg visible-md visible-sm">
-			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img src="Content/Images/logo-socialwhats-header.png" title="" alt="" style="margin: 5px 10px 0;" />
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6">
-				<div class="button-wrapper float-right">
-					<div class="button round02 display-table-cell valgin-middle align-center font14 color-white">
-						<span class="font11	bold">Sign up</span>
-					</div>
+			<div id="header-wrapper" class="center-block">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<img src="Content/Images/logo-socialwhats-header.png" title="" alt="" style="margin: 5px 10px 0;" />
 				</div>
-				<div class="button-wrapper float-right">
-					<div class="button round02 display-table-cell valgin-middle align-center font14 color-white">
-						<span class="font11 bold">Login</span>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="button-wrapper float-right">
+						<div class="button round02 display-table-cell valgin-middle align-center font14 color-white">
+							<span class="font11	bold">Sign up</span>
+						</div>
 					</div>
-				</div>
-				<div class="clear">
+					<div class="button-wrapper float-right">
+						<div class="button round02 display-table-cell valgin-middle align-center font14 color-white">
+							<span class="font11 bold">Login</span>
+						</div>
+					</div>
+					<div class="clear">
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<div id="header" class="custom-shadow bg-white center-block col-xs-12 visible-xs">
-			<div class="col-xs-6">
-				<img src="Content/Images/logo-socialwhats-header-bird-only.png" title="" alt="" style="margin: 5px 10px 0;" />
-			</div>
-			<div class="col-xs-6">
-				<div class="button-menu-wrapper float-right">
-					<div id="small-menu-link"  class="button-menu round02 display-table-cell valgin-middle align-center font14 color-white">
-						<span class="font11	bold"><img src="Content/Images/icon-menu.png" alt="" title="" /></span>
+			<div id="header-wrapper" class="center-block">
+				<div class="col-xs-6">
+					<img src="Content/Images/logo-socialwhats-header-bird-only.png" title="" alt="" style="margin: 5px 10px 0;" />
+				</div>
+				<div class="col-xs-6">
+					<div class="button-menu-wrapper float-right">
+						<div id="small-menu-link"  class="button-menu round02 display-table-cell valgin-middle align-center font14 color-white">
+							<span class="font11	bold"><img src="Content/Images/icon-menu.png" alt="" title="" /></span>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div id="small-menu" class="col-sm-12 col-xs-12 custom-shadow" style="position: relative; top: 6px; display: none;">
-				<div class="menu-item display-table color-606060">
-					<span class="menu-item-link font14 display-table-cell valign-middle align-center bg-white" style="padding-top: 8px;">Sign up</span>
+				<div id="small-menu" class="col-sm-12 col-xs-12 custom-shadow" style="position: relative; top: 6px; display: none;">
+					<div class="menu-item display-table color-606060">
+						<span class="menu-item-link font14 display-table-cell valign-middle align-center bg-white" style="padding-top: 15px;">Sign up</span>
+					</div>
+					<div class="menu-item display-table color-606060">
+						<span class="menu-item-link font14 display-table-cell valign-middle align-center bg-white" style="padding-top: 15px;">Login</span>
+					</div>
 				</div>
-				<div class="menu-item display-table color-606060">
-					<span class="menu-item-link font14 display-table-cell valign-middle align-center bg-white" style="padding-top: 8px;">Login</span>
+				<div class="clear">
 				</div>
-			</div>
-			<div class="clear">
 			</div>
 		</div>
 	</div>	
