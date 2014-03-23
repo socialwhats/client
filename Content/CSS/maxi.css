@@ -13,7 +13,7 @@ Notes: 1em = 10px;
 /* Resets */
 
 html { font-size: 100.01% !important; }
-body { font-size: 10px !important; word-break: break-all; }
+body { font-size: 10px !important; }
 
 html, body, form { padding: 0; }
 
