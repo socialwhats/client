@@ -165,7 +165,7 @@
 						<div class="align-center spacing">
 							<p class="font48 bold color-5094FF">configurações</p>
 						</div>
-						<form id="aditional-info" role="form form-inline" class="center-block spacing" style="max-width: 660px;">
+						<form id="change-number" role="form form-inline" action="http://node.socialwhats.co/api/user/changenumber" class="center-block spacing" style="max-width: 660px;">
 							<div class="form-group">
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 									<label class="font14 color-606060" for="phone">Alterar número de telefone (WhatsApp):</label>
@@ -181,6 +181,8 @@
 								<div class="clear">
 								</div>
 							</div>
+						</form>
+						<form id="change-phone" role="form form-inline" action="http://node.socialwhats.co/api/user/changeemail" class="center-block spacing" style="max-width: 660px;">
 							<div class="form-group">
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 									<label class="font14 color-606060" for="email">Alterar endereço de e-mail (Gmail):</label>
@@ -202,9 +204,11 @@
 							<p class="font24 color-606060">Ao deletar sua conta seus dados de WhatsApp serāo desvinculados do seu Twitter.</p>
 						</div>
 						<div class="center-block" style="max-width: 160px;">
-							<div id="delete-account-btn" class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
-								<span class="font11	bold">Deletar</span>
-							</div>
+							<a href="http://node.socialwhats.co/api/user/clear">
+								<div id="delete-account-btn" class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
+									<span class="font11	bold">Deletar</span>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
