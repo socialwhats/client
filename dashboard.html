@@ -71,12 +71,12 @@
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<div class="button-wrapper float-right">
 						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<span class="font11 bold">Login</span>
+							<span class="font11 bold">Log Out</span>
 						</div>
 					</div>
 					<div class="button-wrapper float-right">
 						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<span class="font11	bold">Sign Up</span>
+							<span class="font11	bold">Configurações</span>
 						</div>
 					</div>
 
@@ -100,10 +100,10 @@
 				</div>
 				<div id="small-menu" class="col-sm-12 col-xs-12 custom-shadow" style="position: relative; top: 6px; display: none;">
 					<div class="menu-item display-table color-606060">
-						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Sign up</span>
+						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Configurações</span>
 					</div>
 					<div class="menu-item display-table color-606060">
-						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Login</span>
+						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Log Out</span>
 					</div>
 				</div>
 				<div class="clear">
@@ -115,28 +115,68 @@
 				<div class="content-block display-table col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<div class="display-table-cell valign-middle">
 						<div class="align-center">
-							<img src="Content/Images/img-socialwhats-logo-blue.png" alt="" title="">
+							<img src="Content/Images/img-socialwhats-logo-150px-blue.png" alt="" title="">
 						</div>
 						<div class="align-center">
-							<p class="font48 bold color-5094FF">Seja Bem-Vindo!</p>
-							<p class="font30 color-606060">Complete seu cadastro:</p>
+							<p class="font48 bold color-5094FF">dashboard</p>
 						</div>
-						<form id="aditional-info" role="form" class="center-block" style="max-width: 250px;">
-							<div class="form-group">
-								<label class="font14 color-606060" for="phone">Digite seu telefone (WhatsApp):</label>
-								<input type="text" class="form-control" name="phone" placeholder="Exemplo: 5511999999999">
-							</div>
-							<div class="form-group">
-								<label class="font14 color-606060" for="email">Digite seu e-mail (Gmail):</label>
-								<input type="text" class="form-control" name="email" placeholder="nome@gmail.com">
-							</div>
-							<div class="center-block" style="max-width: 160px;">
-								<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"
-									onclick="document.getElementById('aditional-info').submit()"> 
-									<span class="font11	bold">Enviar</span>
+				
+						<div id="enable-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div style="padding: 20px;">
+								<img src="Content/Images/img-whatsapp-twitter-200px-blue.png" alt="" title="">
+								<div class="spacing">
+									<p class="font30 color-5094FF">Integraçāo com o Twitter</p>
+									<p class="font14 color-606060">Integraçāo entre o Twitter e seu WhatsApp. Receba seu feed. Twite.</p>
+								</div>
+								<div class="center-block" style="max-width: 160px;">
+									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
+										<span class="font11	bold">Desativar</span>
+									</div>
 								</div>
 							</div>
-						</form>
+						</div>
+						<div id="disable-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div style="padding: 20px;">
+								<img src="Content/Images/img-whatsapp-twitter-200px-gray.png" alt="" title="">
+								<div class="spacing">
+									<p class="font30 color-606060">Integraçāo com o Twitter</p>
+									<p class="font14 color-606060">Integraçāo entre o Twitter e seu WhatsApp. Receba seu feed. Twite.</p>
+								</div>
+								<div class="center-block" style="max-width: 160px;">
+									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
+										<span class="font11	bold">Ativar</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="enable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div style="padding: 20px;">
+								<img src="Content/Images/img-whatsapp-gmail-200px-blue.png" alt="" title="">
+								<div class="spacing">
+									<p class="font30 color-5094FF">Integraçāo com o Gmail</p>
+									<p class="font14 color-606060">Integraçāo entre o Gmail e seu WhatsApp. Receba as mensagens do WhatsApp em sua Caixa de Entrada e responda elas pelo e-mail.</p>
+								</div>
+								<div class="center-block" style="max-width: 160px;">
+									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
+										<span class="font11	bold">Desativar</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="disable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div style="padding: 20px;">
+								<img src="Content/Images/img-whatsapp-gmail-200px-gray.png" alt="" title="">
+								<div class="spacing">
+									<p class="font30 color-5094FF">Integraçāo com o Gmail</p>
+									<p class="font14 color-606060">Integraçāo entre o Gmail e seu WhatsApp. Receba as mensagens do WhatsApp em sua Caixa de Entrada e responda elas pelo e-mail.</p>
+								</div>
+								<div class="center-block" style="max-width: 160px;">
+									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
+										<span class="font11	bold">Ativar</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
