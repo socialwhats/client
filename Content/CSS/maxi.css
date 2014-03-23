@@ -19,7 +19,7 @@ html, body, form { padding: 0; }
 
 h1, h2, h3, h4, h5, h6, p, ul, li { margin: 1em 0; padding: 0; }
 
-a { text-decoration: none; outline: none; }
+a { text-decoration: none; outline: none; color: white !important; }
 a:link img { border: none; }
 
 table { border-collapse: separate; border-spacing: 0; }
@@ -112,11 +112,11 @@ iframe { width: 100% !important; }
 
 /* Colors */
 
-.color-white { color: White; }
-.color-F1F1F1 { color: #F1F1F1; }
-.color-5094FF { color: #5094FF; }
-.color-4077CC { color: #4077CC; }
-.color-606060 { color: #606060; }
+.color-white { color: White !important; }
+.color-F1F1F1 { color: #F1F1F1 !important; }
+.color-5094FF { color: #5094FF !important; }
+.color-4077CC { color: #4077CC !important; }
+.color-606060 { color: #606060 !important; }
 
 /* BG colors */
 

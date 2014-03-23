@@ -9,6 +9,71 @@
 
     <script src="Content/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
     <script src="Content/Scripts/skrollr.min.js" type="text/javascript"></script>
+    <script src="Content/Scripts/scripts.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+		function changeTwtStatus(status) {
+			var twt = "";
+
+			if(status == "enable") {
+				twt = "enabletwitter";
+			} else {
+				if(status == "disable") {
+					twt = "disabletwitter";
+				}
+			}
+			
+			$.ajax({
+				url: "www.node.socialwhats.co/api/user"+twt,
+				type: "POST",
+				success: function(data) {
+					if(status == "enable") {
+						$("#enable-twt").css("display", "none");
+						$("#disable-twt").css("display", "block");
+					} else {
+						if(status == "disable") {
+							$("#disable-twt").css("display", "none");
+							$("#enable-twt").css("display", "block");
+						}
+					}
+			    }
+			});
+		}
+
+		function changeMailStatus(status) {
+			var mail = "";
+
+			if(status == "enable") {
+				mail = "enableemail";
+			} else {
+				if(status == "disable") {
+					mail = "disableemail";
+				}
+			}
+
+			$.ajax({
+				url: "www.node.socialwhats.co/api/user"+mail,
+				type: "POST",
+				success: function(data) {
+					if(status == "enable") {
+						$("#enable-gmail").css("display", "none");
+						$("#disable-gmail").css("display", "block");
+					} else {
+						if(status == "disable") {
+							$("#disable-gmail").css("display", "none");
+							$("#enable-gmail").css("display", "block");
+						}
+					}
+			    }
+			});
+		}
+
+		$(document).ready(function() {	
+			$("#small-menu-link").on("click", function() {
+	    		$("#small-menu").slideToggle("slow");
+	    	});
+		});
+    </script>
 
     <title>Title</title>
     <style>
@@ -53,13 +118,6 @@
 			left: 0;
 		}
     </style>
-    <script type="text/javascript">
-    $("document").ready( function(){
-    	$("#small-menu-link").on("click", function() {
-    		$("#small-menu").slideToggle("slow");
-    	})
-    })
-    </script>
 </head>
 <body class="bg-F1F1F1">
 	<div class="custom-container">
@@ -71,12 +129,16 @@
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<div class="button-wrapper float-right">
 						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<span class="font11 bold">Log Out</span>
+							<a href="">
+								<span class="font11 bold">Log Out</span>
+							</a>
 						</div>
 					</div>
 					<div class="button-wrapper float-right">
 						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<span class="font11	bold">Configurações</span>
+							<a href="settings.html">
+								<span class="font11	bold">Configurações</span>
+							</a>
 						</div>
 					</div>
 
@@ -99,12 +161,16 @@
 					</div>
 				</div>
 				<div id="small-menu" class="col-sm-12 col-xs-12 custom-shadow" style="position: relative; top: 6px; display: none;">
-					<div class="menu-item display-table color-606060">
-						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Configurações</span>
-					</div>
+					<a href="settings.html">
+						<div class="menu-item display-table color-606060">
+							<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Configurações</span>
+						</div>
+					</a>
+					<a href="">
 					<div class="menu-item display-table color-606060">
 						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Log Out</span>
 					</div>
+					</a>
 				</div>
 				<div class="clear">
 				</div>
@@ -121,56 +187,56 @@
 							<p class="font48 bold color-5094FF">dashboard</p>
 						</div>
 				
-						<div id="enable-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div id="enable-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
 								<img src="Content/Images/img-whatsapp-twitter-200px-blue.png" alt="" title="">
 								<div class="spacing">
 									<p class="font30 color-5094FF">Integraçāo com o Twitter</p>
 									<p class="font14 color-606060">Integraçāo entre o Twitter e seu WhatsApp. Receba seu feed. Twite.</p>
 								</div>
-								<div class="center-block" style="max-width: 160px;">
+								<div class="center-block" style="max-width: 160px;" onclick="changeTwtStatus('enable')">
 									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 										<span class="font11	bold">Desativar</span>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div id="disable-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div id="disable-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
 								<img src="Content/Images/img-whatsapp-twitter-200px-gray.png" alt="" title="">
 								<div class="spacing">
 									<p class="font30 color-606060">Integraçāo com o Twitter</p>
 									<p class="font14 color-606060">Integraçāo entre o Twitter e seu WhatsApp. Receba seu feed. Twite.</p>
 								</div>
-								<div class="center-block" style="max-width: 160px;">
+								<div class="center-block" style="max-width: 160px;" onclick="changeTwtStatus('disable')">
 									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 										<span class="font11	bold">Ativar</span>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div id="enable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div id="enable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
 								<img src="Content/Images/img-whatsapp-gmail-200px-blue.png" alt="" title="">
 								<div class="spacing">
 									<p class="font30 color-5094FF">Integraçāo com o Gmail</p>
 									<p class="font14 color-606060">Integraçāo entre o Gmail e seu WhatsApp. Receba as mensagens do WhatsApp em sua Caixa de Entrada e responda elas pelo e-mail.</p>
 								</div>
-								<div class="center-block" style="max-width: 160px;">
+								<div class="center-block" style="max-width: 160px;" onclick="changeMailStatus('enable')">
 									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 										<span class="font11	bold">Desativar</span>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div id="disable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div id="disable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
 								<img src="Content/Images/img-whatsapp-gmail-200px-gray.png" alt="" title="">
 								<div class="spacing">
 									<p class="font30 color-606060">Integraçāo com o Gmail</p>
 									<p class="font14 color-606060">Integraçāo entre o Gmail e seu WhatsApp. Receba as mensagens do WhatsApp em sua Caixa de Entrada e responda elas pelo e-mail.</p>
 								</div>
-								<div class="center-block" style="max-width: 160px;">
+								<div class="center-block" style="max-width: 160px;" onclick="changeMailStatus('disable')">
 									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 										<span class="font11	bold">Ativar</span>
 									</div>

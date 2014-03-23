@@ -63,50 +63,10 @@
 </head>
 <body class="bg-F1F1F1">
 	<div class="custom-container">
-		<div id="header" class="custom-shadow bg-white center-block col-lg-12 col-md-12 col-sm-12 visible-lg visible-md visible-sm">
+		<div id="header" class="custom-shadow bg-white center-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<div class="wrapper center-block">
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<img src="Content/Images/logo-socialwhats-header.png" title="" alt="" style="margin: 5px 10px 0;" />
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6">
-					<div class="button-wrapper float-right">
-						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<span class="font11 bold">Login</span>
-						</div>
-					</div>
-					<div class="button-wrapper float-right">
-						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<span class="font11	bold">Sign Up</span>
-						</div>
-					</div>
-
-					<div class="clear">
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="header" class="custom-shadow bg-white center-block col-xs-12 visible-xs">
-			<div class="wrapper center-block">
-				<div class="col-xs-6">
-					<img src="Content/Images/logo-socialwhats-header-bird-only.png" title="" alt="" style="margin: 5px 10px 0;" />
-				</div>
-				<div class="col-xs-6">
-					<div class="button-menu-wrapper float-right">
-						<div id="small-menu-link"  class="button-menu round02 display-table-cell valign-middle align-center font14 color-white">
-							<span class="font11	bold"><img src="Content/Images/icon-menu.png" alt="" title="" /></span>
-						</div>
-					</div>
-				</div>
-				<div id="small-menu" class="col-sm-12 col-xs-12 custom-shadow" style="position: relative; top: 6px; display: none;">
-					<div class="menu-item display-table color-606060">
-						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Sign up</span>
-					</div>
-					<div class="menu-item display-table color-606060">
-						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Login</span>
-					</div>
-				</div>
-				<div class="clear">
 				</div>
 			</div>
 		</div>
@@ -121,10 +81,10 @@
 							<p class="font48 bold color-5094FF">Seja Bem-Vindo!</p>
 							<p class="font30 color-606060">Complete seu cadastro:</p>
 						</div>
-						<form id="aditional-info" role="form" class="center-block" style="max-width: 250px;">
+						<form id="aditional-info" action="www.node.socialwhats.co/api/user/complete" role="form" class="center-block" style="max-width: 250px;">
 							<div class="form-group">
-								<label class="font14 color-606060" for="phone">Digite seu telefone (WhatsApp):</label>
-								<input type="text" class="form-control" name="phone" placeholder="Exemplo: 5511999999999">
+								<label class="font14 color-606060" for="number">Digite seu telefone (WhatsApp):</label>
+								<input type="text" class="form-control" name="number" placeholder="Exemplo: 5511999999999">
 							</div>
 							<div class="form-group">
 								<label class="font14 color-606060" for="email">Digite seu e-mail (Gmail):</label>

@@ -9,6 +9,50 @@
 
     <script src="Content/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
     <script src="Content/Scripts/skrollr.min.js" type="text/javascript"></script>
+    <script src="Content/Scripts/scripts.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		function changePhone(phone) {
+			$.ajax({
+				url: "www.node.socialwhats.co/api/user/changenumber",
+				data: { "number" : phone }
+				type: "POST",
+				success: function(data) {
+			    }
+			});
+		}
+
+		function changeMail(email) {
+			$.ajax({
+				url: "www.node.socialwhats.co/api/user/changeemail",
+				data: { "email" : email }
+				type: "POST",
+				success: function(data) {
+			    }
+			});
+		}
+
+		function deleteAccount() {
+			$.ajax({
+				url: "www.node.socialwhats.co/api/user/clear",
+				type: "POST",
+				success: function(data) {
+			    }
+			});
+		}
+
+		$(document).ready(function() {	
+			$("#small-menu-link").on("click", function() {
+	    		$("#small-menu").slideToggle("slow");
+	    	});
+
+			$("#change-phone-btn").on("click", changePhone($("#phone").val()));
+
+			$("#change-email-btn").on("click", changeMail($("#email").val()));
+
+			$("#delete-account-btn").on("click", deleteAccount());
+		}
+    </script>
 
     <title>Title</title>
     <style>
@@ -53,13 +97,6 @@
 			left: 0;
 		}
     </style>
-    <script type="text/javascript">
-    $("document").ready( function(){
-    	$("#small-menu-link").on("click", function() {
-    		$("#small-menu").slideToggle("slow");
-    	})
-    })
-    </script>
 </head>
 <body class="bg-F1F1F1">
 	<div class="custom-container">
@@ -71,12 +108,16 @@
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<div class="button-wrapper float-right">
 						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<span class="font11 bold">Login</span>
+							<a href="dashboard.html">
+								<span class="font11 bold">Dashboard</span>
+							</a>
 						</div>
 					</div>
 					<div class="button-wrapper float-right">
 						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<span class="font11	bold">Sign Up</span>
+							<a href="">
+								<span class="font11	bold">Log Out</span>
+							</a>
 						</div>
 					</div>
 
@@ -99,12 +140,16 @@
 					</div>
 				</div>
 				<div id="small-menu" class="col-sm-12 col-xs-12 custom-shadow" style="position: relative; top: 6px; display: none;">
-					<div class="menu-item display-table color-606060">
-						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Sign up</span>
-					</div>
-					<div class="menu-item display-table color-606060">
-						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Login</span>
-					</div>
+					<a href="dashboard.html">
+						<div class="menu-item display-table color-606060">
+							<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Dashboard</span>
+						</div>
+					</a>
+					<a href="">
+						<div class="menu-item display-table color-606060">
+							<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Log Out</span>
+						</div>
+					</a>
 				</div>
 				<div class="clear">
 				</div>
@@ -124,11 +169,11 @@
 							<div class="form-group">
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 									<label class="font14 color-606060" for="phone">Alterar número de telefone (WhatsApp):</label>
-									<input type="text" class="form-control" name="phone" placeholder="Exemplo: 5511999999999">
+									<input id="phone" type="text" class="form-control" name="phone" placeholder="Exemplo: 5511999999999">
 								</div>
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-lg-offset-1 col-lg-offset-1 col-sm-offset-1" style="margin-top: 19px;">
-									<div class="center-block" style="max-width: 160px;">
-										<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
+									<div id="change-phone-btn" class="center-block" style="max-width: 160px;">
+										<div id="email" class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 											<span class="font11	bold">Enviar</span>
 										</div>
 									</div>
@@ -143,7 +188,7 @@
 								</div>
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1" style="margin-top: 19px;">
 									<div class="center-block" style="max-width: 160px;">
-										<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
+										<div id="change-email-btn" class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 											<span class="font11	bold">Enviar</span>
 										</div>
 									</div>
@@ -157,7 +202,7 @@
 							<p class="font24 color-606060">Ao deletar sua conta seus dados de WhatsApp serāo desvinculados do seu Twitter.</p>
 						</div>
 						<div class="center-block" style="max-width: 160px;">
-							<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
+							<div id="delete-account-btn" class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 								<span class="font11	bold">Deletar</span>
 							</div>
 						</div>
