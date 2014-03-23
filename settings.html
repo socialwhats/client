@@ -17,7 +17,7 @@
 			$.ajax({
 				url: "http://node.socialwhats.co/api/user/changenumber",
 				data: { "number" : phone }
-				type: "POST",
+				type: "GET",
 				success: function(data) {
 			    }
 			});
@@ -27,7 +27,7 @@
 			$.ajax({
 				url: "http://node.socialwhats.co/api/user/changeemail",
 				data: { "email" : email }
-				type: "POST",
+				type: "GET",
 				success: function(data) {
 			    }
 			});
@@ -36,7 +36,7 @@
 		function deleteAccount() {
 			$.ajax({
 				url: "http://node.socialwhats.co/api/user/clear",
-				type: "POST",
+				type: "GET",
 				success: function(data) {
 			    }
 			});

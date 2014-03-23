@@ -26,7 +26,7 @@
 			
 			$.ajax({
 				url: "http://node.socialwhats.co/api/user/"+twt,
-				type: "POST",
+				type: "GET",
 				success: function(data) {
 					if(status == "enable") {
 						$("#enable-twt").css("display", "none");
@@ -54,7 +54,7 @@
 
 			$.ajax({
 				url: "http://node.socialwhats.co/api/user/"+mail,
-				type: "POST",
+				type: "GET",
 				success: function(data) {
 					if(status == "enable") {
 						$("#enable-gmail").css("display", "none");
@@ -208,7 +208,7 @@
 								<img src="Content/Images/img-whatsapp-twitter-200px-blue.png" alt="" title="" width="200" height="200" />
 								<div class="spacing">
 									<p class="font30 color-5094FF">Integraçāo com o Twitter</p>
-									<p class="font14 color-606060">Integraçāo entre o Twitter e seu WhatsApp. Receba seu feed. Twite.</p>
+									<p class="font14 color-606060">Integraçāo entre o Twitter e seu WhatsApp. Receba seu feed. Twitte.</p>
 								</div>
 								<div class="center-block" style="max-width: 160px;" onclick="changeTwtStatus('enable')">
 									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
@@ -233,10 +233,10 @@
 						</div>
 						<div id="enable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
-								<img src="Content/Images/img-whatsapp-gmail-200px-blue.png" alt="" title="">
+								<img src="Content/Images/img-whatsapp-gmail-200px-blue.png" alt="" title="" width="200" height="200" />
 								<div class="spacing">
 									<p class="font30 color-5094FF">Integraçāo com o Gmail</p>
-									<p class="font14 color-606060">Integraçāo entre o Gmail e seu WhatsApp. Receba as mensagens do WhatsApp em sua Caixa de Entrada e responda elas pelo e-mail.</p>
+									<p class="font14 color-606060">Receba as mensagens do WhatsApp em sua Caixa de Entrada.</p>
 								</div>
 								<div class="center-block" style="max-width: 160px;" onclick="changeMailStatus('enable')">
 									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
@@ -247,10 +247,10 @@
 						</div>
 						<div id="disable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
-								<img src="Content/Images/img-whatsapp-gmail-200px-gray.png" alt="" title="">
+								<img src="Content/Images/img-whatsapp-gmail-200px-gray.png" alt="" title="" width="200" height="200" />
 								<div class="spacing">
 									<p class="font30 color-606060">Integraçāo com o Gmail</p>
-									<p class="font14 color-606060">Integraçāo entre o Gmail e seu WhatsApp. Receba as mensagens do WhatsApp em sua Caixa de Entrada e responda elas pelo e-mail.</p>
+									<p class="font14 color-606060">Receba as mensagens do WhatsApp em sua Caixa de Entrada.</p>
 								</div>
 								<div class="center-block" style="max-width: 160px;" onclick="changeMailStatus('disable')">
 									<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
