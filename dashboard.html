@@ -72,6 +72,21 @@
 			$("#small-menu-link").on("click", function() {
 	    		$("#small-menu").slideToggle("slow");
 	    	});
+
+	    	var twt = getQueryVariable("twitter");
+	    	var gmail = getQueryVariable("email");
+
+	    	if(twt) {
+				$("#enable-twt").css("display", "block");
+			} else {
+				$("#enable-twt").css("display", "hidden");
+			}
+
+			if(gmail) {
+				$("#enable-gmail").css("display", "block");
+			} else {
+				$("#enable-gmail").css("display", "hidden");
+			}
 		});
     </script>
 
