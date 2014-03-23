@@ -22,15 +22,19 @@
 	    	var gmail = getQueryVariable("email");
 
 	    	if(twt) {
-				$("#enable-twt").css("display", "block");
+				$("#enabled-twt").css("display", "hidden");
+				$("#disabled-twt").css("display", "block");
 			} else {
-				$("#enable-twt").css("display", "hidden");
+				$("#enabled-twt").css("display", "block");
+				$("#disabled-twt").css("display", "hidden");
 			}
 
 			if(gmail) {
-				$("#enable-gmail").css("display", "block");
+				$("#enabled-gmail").css("display", "hidden");
+				$("#disabled-gmail").css("display", "block");
 			} else {
-				$("#enable-gmail").css("display", "hidden");
+				$("#enabled-gmail").css("display", "block");
+				$("#disabled-gmail").css("display", "hidden");
 			}
 		});
     </script>
@@ -147,7 +151,7 @@
 							<p class="font48 bold color-5094FF">dashboard</p>
 						</div>
 				
-						<div id="enable-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
+						<div id="enabled-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
 								<img src="Content/Images/img-whatsapp-twitter-200px-blue.png" alt="" title="" width="200" height="200" />
 								<div class="spacing">
@@ -163,9 +167,9 @@
 								</div>
 							</div>
 						</div>
-						<div id="disable-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
+						<div id="disabled-twt" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
-								<img src="Content/Images/img-whatsapp-twitter-200px-gray.png" alt="" title="">
+								<img src="Content/Images/img-whatsapp-twitter-200px-gray.png" alt="" title="" width="200" height="200" />
 								<div class="spacing">
 									<p class="font30 color-606060">Integraçāo com o Twitter</p>
 									<p class="font14 color-606060">Integraçāo entre o Twitter e seu WhatsApp. Receba seu feed. Twitte.</p>
@@ -179,7 +183,7 @@
 								</div>
 							</div>
 						</div>
-						<div id="enable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
+						<div id="enabled-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
 								<img src="Content/Images/img-whatsapp-gmail-200px-blue.png" alt="" title="" width="200" height="200" />
 								<div class="spacing">
@@ -195,7 +199,7 @@
 								</div>
 							</div>
 						</div>
-						<div id="disable-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
+						<div id="disabled-gmail" class="align-center bg-white col-lg-6 col-md-6 col-sm-12 col-xs-12" style="display: none;">
 							<div style="padding: 20px;">
 								<img src="Content/Images/img-whatsapp-gmail-200px-gray.png" alt="" title="" width="200" height="200" />
 								<div class="spacing">
