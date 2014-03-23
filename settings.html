@@ -169,10 +169,10 @@
 							<div class="form-group">
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
 									<label class="font14 color-606060" for="phone">Alterar número de telefone (WhatsApp):</label>
-									<input id="phone" type="text" class="form-control" name="phone" placeholder="Exemplo: 5511999999999">
+									<input type="text" class="form-control" name="number" placeholder="Exemplo: 5511999999999">
 								</div>
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-lg-offset-1 col-lg-offset-1 col-sm-offset-1" style="margin-top: 19px;">
-									<div id="change-phone-btn" class="center-block" style="max-width: 160px;">
+									<div class="center-block" style="max-width: 160px;" onclick="document.getElementById('change-number').submit()">
 										<div id="email" class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 											<span class="font11	bold">Alterar</span>
 										</div>
@@ -189,7 +189,7 @@
 									<input type="text" class="form-control" name="email" placeholder="nome@gmail.com">
 								</div>
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1" style="margin-top: 19px;">
-									<div class="center-block" style="max-width: 160px;">
+									<div class="center-block" style="max-width: 160px;" onclick="document.getElementById('change-phone').submit()">
 										<div id="change-email-btn" class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF"> 
 											<span class="font11	bold">Alterar</span>
 										</div>
