@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 
     <link href="Content/CSS/maxi.css" rel="stylesheet" type="text/css" />
@@ -13,15 +14,20 @@
     <style>
     	.custom-container { width: 100%; }
 
-    	.content-breathing { margin-top: 60px; position: relative; z-index: 1; }
+    	.content-breathing { margin-top: 90px; position: relative; z-index: 1; }
     	.content-block { height: 600px; position: relative; z-index: 1; }
 
     	#header { width: 100%; height: 60px; position: fixed; top: 0; left: 0; right: 0; z-index: 2; }
-    	#header-wrapper { max-width: 1000px;}
+    	.wrapper { max-width: 1000px; } 
+
+
     	.button-wrapper { margin: 10px 10px 0 0; }
     	.button-wrapper:last-child { margin: 10px 0 !important; }
-    	.button { width: 160px; height: 40px; cursor: pointer; background-color: #5094FF; }
-    	.button:hover { background-color: #4077CC }
+
+    	.button { width: 160px; height: 40px; cursor: pointer; }
+
+    	.button-blue:hover { background-color: #4077CC }
+    	.button-white:hover { background-color: #E5E5E5 }
 
     	.button-menu-wrapper { margin: 5px 10px 0 0; }
     	.button-menu { width: 40px; height: 50px; cursor: pointer; background-color: #5094FF; }
@@ -29,6 +35,21 @@
 
     	.menu-item { width: 100%; height: 52px; border-bottom: 1px solid #C2C2C2; cursor: pointer; }
     	.menu-item-link:hover { background-color: #E5E5E5; }
+
+    	.videoWrapper {
+    		max-width: 1000px;
+    		padding-bottom: 600px; 
+			padding-top: 25px;
+			position: relative;
+		}
+		.videoWrapper iframe {
+			width: 100%;
+			height: 100%;
+			max-height: 600px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
     </style>
     <script type="text/javascript">
     $("document").ready( function(){
@@ -41,21 +62,22 @@
 <body class="bg-F1F1F1">
 	<div class="custom-container">
 		<div id="header" class="custom-shadow bg-white center-block col-lg-12 col-md-12 col-sm-12 visible-lg visible-md visible-sm">
-			<div id="header-wrapper" class="center-block">
+			<div class="wrapper center-block">
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<img src="Content/Images/logo-socialwhats-header.png" title="" alt="" style="margin: 5px 10px 0;" />
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<div class="button-wrapper float-right">
-						<div class="button round02 display-table-cell valgin-middle align-center font14 color-white">
-							<span class="font11	bold">Sign up</span>
-						</div>
-					</div>
-					<div class="button-wrapper float-right">
-						<div class="button round02 display-table-cell valgin-middle align-center font14 color-white">
+						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
 							<span class="font11 bold">Login</span>
 						</div>
 					</div>
+					<div class="button-wrapper float-right">
+						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
+							<span class="font11	bold">Sign Up</span>
+						</div>
+					</div>
+
 					<div class="clear">
 					</div>
 				</div>
@@ -63,13 +85,13 @@
 		</div>
 
 		<div id="header" class="custom-shadow bg-white center-block col-xs-12 visible-xs">
-			<div id="header-wrapper" class="center-block">
+			<div class="wrapper center-block">
 				<div class="col-xs-6">
 					<img src="Content/Images/logo-socialwhats-header-bird-only.png" title="" alt="" style="margin: 5px 10px 0;" />
 				</div>
 				<div class="col-xs-6">
 					<div class="button-menu-wrapper float-right">
-						<div id="small-menu-link"  class="button-menu round02 display-table-cell valgin-middle align-center font14 color-white">
+						<div id="small-menu-link"  class="button-menu round02 display-table-cell valign-middle align-center font14 color-white">
 							<span class="font11	bold"><img src="Content/Images/icon-menu.png" alt="" title="" /></span>
 						</div>
 					</div>
@@ -85,6 +107,77 @@
 				<div class="clear">
 				</div>
 			</div>
+		</div>
+		<div class="content-breathing col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<center>
+				<div class="videoWrapper">
+				 	<iframe src="//player.vimeo.com/video/82493478?badge=0" width="926" height="500" frameborder="0" webkitallowfullscreen 	mozallowfullscreen allowfullscreen></iframe>
+				</div>
+			</center>
+			<div class="bg-5094FF">
+				<div class="wrapper center-block">
+					<div class="content-block display-table">
+						<div class="display-table-cell valign-middle">
+							<div class="align-center col-lg-4 col-md-4 col-sm-5 col-xs-12">
+								<img src="Content/Images/img-whatsapp-twitter-white.png" alt="" title="">
+							</div>
+							<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+								<span class="color-white">
+									<p class="font48 bold">Twitter e WhatsApp juntos</p>
+									<p class="font30">Twite de um jeito diferente</p>
+									<p class="font14 bold">
+										Com o SocialWhats, você pode usar o seu WhatsApp para interagir com o Twitter de modo simples e divertido.
+										Twitte, leia seu feed e fique ligado em quem está twittando com suas hashtags favoritas 
+										através do maior aplicativo de mensagens.
+									</p>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper center-block">
+				<div class="content-block display-table">
+					<div class="display-table-cell valign-middle">
+						<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+							<span class="color-606060">
+								<p class="font48 bold">WhatsApp no Browser</p>
+								<p class="font30">Converse no WhatsApp através do seu Gmail</p>
+								<p class="font14 bold">
+									Com SocialWhats, você também pode utilizar o WhatsApp no seu computador, utilizando o Gmail. Envie e receba mensagens de pessoas ou grupos diretamente na sua caixa de entrada.
+								</p>
+							</span>
+						</div>
+						<div class="align-center col-lg-4 col-md-4 col-sm-5 col-xs-12">
+							<img src="Content/Images/img-whatsapp-gmail-blue.png" alt="" title="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-5094FF" style="overflow: hidden;">
+				<div class="wrapper center-block">
+					<center>
+						<div class="content-block display-table">
+							<div class="display-table-cell valign-middle">
+								<div class="align-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<span class="color-white">
+										<p class="font48 bold">Conecte-se com o Twitter</p>
+										<p class="font30">Utilize sua conta do twitter para logar no SocialWhats</p>
+									</span>
+									<div style="padding: 30px 0; position: relative; left: 50%; margin-left: -80px;">
+										<div class="button button-white round02 display-table-cell valign-middle align-center font14 color-5094FF bg-white">
+											<span class="font11	bold">Sign Up</span>
+										</div>
+									</div>
+									<div style="padding-top: 15px;">
+										<img src="Content/Images/img-socialwhats-logo-150px-white.png" alt="" title="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</center>
+				</div>
+			</div>		
 		</div>
 	</div>	
 </body>
