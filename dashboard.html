@@ -21,20 +21,20 @@
 	    	var twt = getQueryVariable("twitter");
 	    	var gmail = getQueryVariable("email");
 
-	    	if(twt) {
-				$("#enabled-twt").css("display", "hidden");
-				$("#disabled-twt").css("display", "block");
-			} else {
+	    	if(twt == "true") {
 				$("#enabled-twt").css("display", "block");
 				$("#disabled-twt").css("display", "hidden");
+			} else {
+				$("#enabled-twt").css("display", "hidden");
+				$("#disabled-twt").css("display", "block");
 			}
 
-			if(gmail) {
-				$("#enabled-gmail").css("display", "hidden");
-				$("#disabled-gmail").css("display", "block");
-			} else {
+			if(gmail == "true") {
 				$("#enabled-gmail").css("display", "block");
 				$("#disabled-gmail").css("display", "hidden");
+			} else {
+				$("#enabled-gmail").css("display", "hidden");
+				$("#disabled-gmail").css("display", "block");
 			}
 		});
     </script>
@@ -92,7 +92,7 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<div class="button-wrapper float-right">
-						<a href="">
+						<a href="http://www.socialwhats.co/index.html">
 							<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
 								<span class="font11 bold">Log Out</span>
 							</div>
@@ -130,10 +130,10 @@
 							<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Configurações</span>
 						</div>
 					</a>
-					<a href="">
-					<div class="menu-item display-table color-606060">
-						<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Log Out</span>
-					</div>
+					<a href="http://www.socialwhats.co/index.html">
+						<div class="menu-item display-table color-606060">
+							<span class="menu-item-link font14 bold display-table-cell valign-middle align-center bg-white" style="padding-top: 3px;">Log Out</span>
+						</div>
 					</a>
 				</div>
 				<div class="clear">
