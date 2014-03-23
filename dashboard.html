@@ -24,7 +24,7 @@
 			}
 			
 			$.ajax({
-				url: "www.node.socialwhats.co/api/user"+twt,
+				url: "http://node.socialwhats.co/api/user"+twt,
 				type: "POST",
 				success: function(data) {
 					if(status == "enable") {
@@ -52,7 +52,7 @@
 			}
 
 			$.ajax({
-				url: "www.node.socialwhats.co/api/user"+mail,
+				url: "http://node.socialwhats.co/api/user"+mail,
 				type: "POST",
 				success: function(data) {
 					if(status == "enable") {
@@ -128,18 +128,18 @@
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-6">
 					<div class="button-wrapper float-right">
-						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<a href="">
+						<a href="">
+							<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
 								<span class="font11 bold">Log Out</span>
-							</a>
-						</div>
+							</div>
+						</a>
 					</div>
 					<div class="button-wrapper float-right">
-						<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
-							<a href="settings.html">
+						<a href="settings.html">
+							<div class="button button-blue round02 display-table-cell valign-middle align-center font14 color-white bg-5094FF">
 								<span class="font11	bold">Configurações</span>
-							</a>
-						</div>
+							</div>
+						</a>
 					</div>
 
 					<div class="clear">

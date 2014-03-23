@@ -19,7 +19,7 @@ html, body, form { padding: 0; }
 
 h1, h2, h3, h4, h5, h6, p, ul, li { margin: 1em 0; padding: 0; }
 
-a { text-decoration: none; outline: none; color: white !important; }
+a { text-decoration: none !important; outline: none; color: white !important; }
 a:link img { border: none; }
 
 table { border-collapse: separate; border-spacing: 0; }
